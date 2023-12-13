@@ -10,29 +10,44 @@
     </header>
   </head>
   <body>
-    <form id="contact-form" action="your-server-endpoint" method="post">
-      <input
-        type="text"
-        id="name"
-        name="name"
-        placeholder="Your Name"
-        required
-      />
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Your Email"
-        required
-      />
-      <textarea
-        id="message"
-        name="message"
-        placeholder="Your Message"
-        required
-      ></textarea>
-      <button type="submit" class="send">Send</button>
-    </form>
+    <div class="side-buttons left-buttons">
+      <!-- Left side buttons -->
+    </div>
+
+    <div class="main-content">
+      <p class="style1-1">send me a message !</p>
+      <form
+        id="contact-form"
+        action="https://formspree.io/f/mzblnqyl"
+        method="post"
+      >
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your Name"
+          required
+        />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your Email"
+          required
+        />
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Your Message"
+          required
+        ></textarea>
+        <button type="submit" class="send">Send</button>
+      </form>
+    </div>
+
+    <div class="side-buttons right-buttons">
+      <!-- Right side buttons -->
+    </div>
 
     <div class="alt-content-container">
       <div class="alt-button-container">
@@ -53,5 +68,38 @@
         </div>
       </div>
     </div>
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const message = document.getElementById("message").value;
+
+          if (!name || !email || !message) {
+            alert("Please fill out all fields.");
+            return;
+          }
+
+          fetch("https://formspree.io/f/mzblnqyl", {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+            },
+            body: new FormData(document.getElementById("contact-form")),
+          })
+            .then((response) => {
+              if (response.ok) {
+                alert("Thank you for your message!");
+                document.getElementById("contact-form").reset();
+              } else {
+                alert("Oops! There was a problem submitting your form");
+              }
+            })
+            .catch((error) => console.error("Error:", error));
+        });
+    </script>
   </body>
 </html>

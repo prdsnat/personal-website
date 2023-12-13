@@ -63,6 +63,15 @@ header {
     color: #333;
 }
 
+.style1-1{
+    font-family:'Avenir Next';
+    font-size: 45px; /* Adjust font size as needed */
+    margin-bottom: 0.5em; /* Remove bottom margin to reduce space between lines */
+    font-weight: lighter;
+    color: #333;
+    text-align: center;
+}
+
 .name{
     font-size: 50px; /* Larger font size for the name */
     font-family:'Avenir Next'; 
@@ -203,6 +212,11 @@ header img {
     color:#333
 }
 
+.side-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
 
 
 
