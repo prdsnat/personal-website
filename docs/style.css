@@ -82,7 +82,9 @@ header {
 
 
 .custom-button img:hover,
-.custom-button img:focus {
+.custom-button img:focus,
+.download-button img:hover,
+.download-button img:focus {
     animation: bounce 1s ease;
 }
 
@@ -217,6 +219,20 @@ header img {
     flex-direction: column;
     align-items: center; 
 }
+.download-button {
+    position: fixed; /* Fixed position relative to the viewport */
+    right: 20px; /* 20px from the right edge of the viewport */
+    bottom: 20px; /* 20px from the bottom edge of the viewport */
+    z-index: 1000; /* Ensures the button is above other elements */
+}
+
+.download-button img {
+    display: block; /* Ensures the image takes up the full space of the <a> tag */
+    width: auto; /* Adjust as necessary */
+    height: auto; /* Adjust as necessary */
+}
+
+
 
 
 
