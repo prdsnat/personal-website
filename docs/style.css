@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Optional, ensures padding does not affect overall width */
+    box-sizing: border-box; 
 }
 
 body {
@@ -12,79 +12,76 @@ body, html {
     height: 100%;
 }
 
-
 header {
     background-color: #cbc7c7;
-    margin-top: 0; /* Removes margin from the top of the header */
+    margin-top: 0; 
     border-bottom: 2px solid #bbb8b8;
 }
 .custom-button {
-    display: block; /* Aligns buttons horizontally */
-    margin: 10px; /* Spacing around buttons */
-    /* Add more styling as needed */
+    display: block;
+    margin: 10px; 
 }
 
 .custom-button img {
-    width: 100px; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-    /* Add more styling as needed */
+    width: 100px; 
+    height: auto;
 }
 .content-container {
     margin-top: 50px;
     margin-left: 25px;
     display: flex;
-    flex-direction: row; /* Place children side by side */
-    align-items: flex-start; /* Align children to the top */
+    flex-direction: row; 
+    align-items: flex-start; 
 }
 
 .custom-button a {
-    display: block; /* Makes the entire area clickable */
+    display: block; 
 }
 
 .custom-button img {
     width: 225px;
     height: auto;
-    transition: transform 0.3s ease; /* Smooth transition for transform property */
+    transition: transform 0.3s ease; 
 }
 
 .button-container {
     display: flex;
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: flex-start; /* Align buttons to the start (left) */
-    margin-right: 100px; /* Add some space between buttons and the text */
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin-right: 100px; 
 }
 
 
 .style1 {
     font-family:'Avenir Next';
-    font-size: 45px; /* Adjust font size as needed */
-    margin-bottom: 0.5em; /* Remove bottom margin to reduce space between lines */
+    font-size: 45px; 
+    margin-bottom: 0.5em; 
     font-weight: lighter;
     color: #333;
 }
 
 .style1-1{
     font-family:'Avenir Next';
-    font-size: 45px; /* Adjust font size as needed */
-    margin-bottom: 0.5em; /* Remove bottom margin to reduce space between lines */
+    font-size: 45px;
+    margin-bottom: 0.5em; 
     font-weight: lighter;
     color: #333;
     text-align: center;
 }
 
 .name{
-    font-size: 50px; /* Larger font size for the name */
+    font-size: 50px; 
     font-family:'Avenir Next'; 
-    margin-top: 5px; /* Add a small space above the name */
+    margin-top: 5px; 
     color: #333; 
 }
-
-
 
 .custom-button img:hover,
 .custom-button img:focus,
 .download-button img:hover,
-.download-button img:focus {
+.download-button img:focus,
+.side-buttons img:focus,
+.side-buttons img:hover{
     animation: bounce 1s ease;
 }
 
@@ -97,9 +94,9 @@ header img {
 .centered-text {
     margin-top: 50px;
     display: flex;
-    flex-direction: column; /* Stack text elements vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: flex-start; /* Align content to the start (left side) */
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-start; 
     text-align: left;
 }
 
@@ -119,7 +116,6 @@ header img {
     width: 100%;
     display: flex;
     justify-content: center;
-    /* Remove the absolute positioning */
 }
 
 
@@ -130,28 +126,28 @@ header img {
 }
 
 .clouds-container {
-    display: flex; /* Display children in a row */
-    justify-content: center; /* Center items horizontally */
-    align-items: flex-start; /* Align items to the start of the cross axis */
-    flex-wrap: wrap; /* Allow items to wrap to next line if needed */
-    padding: 10px 0; /* Add some vertical padding */
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+    padding: 10px 0; 
 }
 
 .cloud-item {
-    text-align: center; /* Center the text and image */
-    margin-right: 20px; /* Space between each cloud-item */
-    flex-basis: 20%; /* Adjust the basis of each item (can be set to a fixed width if preferred) */
-    flex-grow: 1; /* Allow items to grow to fill space */
-    flex-shrink: 0; /* Prevent items from shrinking below their basis */
+    text-align: center; 
+    margin-right: 20px; 
+    flex-basis: 20%; 
+    flex-grow: 1; 
+    flex-shrink: 0; 
     font-family: 'Avenir Next';
     padding-left: 20px;
 }
 
 .cloud-item img {
-    max-width: 100%; /* Ensure the image doesn't exceed its container */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensure the image takes up its own line */
-    margin: 0 auto; /* Center the image */
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
 }
 
 .title{
@@ -186,12 +182,12 @@ header img {
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    box-sizing: border-box; /* Make sure padding doesn't affect the overall width */
+    box-sizing: border-box; 
 }
 
 #contact-form textarea {
     height: 150px;
-    resize: vertical; /* Allow vertical resizing, disable horizontal resizing */
+    resize: vertical;
 }
 
 #contact-form button {
@@ -218,19 +214,106 @@ header img {
     display: flex;
     flex-direction: column;
     align-items: center; 
+    position: fixed; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    z-index: 1000;
 }
 .download-button {
-    position: fixed; /* Fixed position relative to the viewport */
-    right: 20px; /* 20px from the right edge of the viewport */
-    bottom: 20px; /* 20px from the bottom edge of the viewport */
-    z-index: 1000; /* Ensures the button is above other elements */
+    position: fixed; 
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000; 
 }
 
 .download-button img {
-    display: block; /* Ensures the image takes up the full space of the <a> tag */
-    width: auto; /* Adjust as necessary */
-    height: auto; /* Adjust as necessary */
+    display: block; 
+    width: auto; 
+    height: auto; 
 }
+
+.lang{
+    padding-top: 100px;
+}
+
+.left-buttons img{
+    width: 10px;
+}
+
+.left-buttons {
+    margin-top: 50px;
+    left: 20px;
+}
+
+.right-buttons {
+    margin-top: 50px;
+    right: 20px; 
+}
+
+.side-buttons a {
+    display: block; 
+    margin-bottom: 10px; 
+}
+
+.side-buttons img {
+    display: block;
+    width: 100px; 
+    height: auto; 
+    margin-bottom: 25px; 
+    margin-left: 100px;
+    margin-right: 100px;
+    align-items: center;
+}
+
+.project-container {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 20px; 
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    
+}
+
+.project-content {
+   
+    max-width: 60%;
+    margin-right: 20px; 
+}
+
+.project-image , .portrait img{
+    width: 350px; 
+    height: auto; 
+}
+
+.project-name {
+    display: block; 
+    font-size: 30px; 
+    color: #333;
+    font-family: 'Avenir Next';
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    margin: 0; 
+    font-family: 'Avenir Next';
+    font-size: 16px;
+}
+
+.class{
+    font-family: 'Avenir Next';
+    font-size: 20px;
+    font-style: italic;
+}
+
+.portrait img{
+    margin-left: 100px;
+}
+
+
+
+
 
 
 
